@@ -2,12 +2,16 @@
 html, body { height: 100%; margin: 0; }
 body {
   display: flex;
-  justify-content: center;   /* Zentriert horizontal */
-  align-items: center;       /* Zentriert vertikal */
+  justify-content: center;       /* horizontal zentriert */
+  align-items: center;           /* vertikal zentriert (wenn genug Platz) */
+  min-height: 100dvh;            /* volle Bildschirmhöhe (auch auf Handy) */
   background: linear-gradient(135deg, #ffe7ec, #fff);
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-  overflow: hidden;          /* Keine Scrollbar */
+  overflow-y: auto;              /* <-- Scrollen erlauben */
+  overflow-x: hidden;            /* Kein horizontales Scrollen */
+  padding: 20px;                 /* etwas Abstand auf kleinen Screens */
 }
+
 
 #bg {
   position: fixed;
@@ -93,3 +97,23 @@ figcaption {
   color: #444;
   margin-top: 6px;
 }
+@media (max-width: 768px) {
+  body {
+    align-items: flex-start;   /* Inhalt startet oben, nicht zentriert */
+    padding-top: 30px;         /* Luft nach oben */
+  }
+
+  .card {
+    width: 95%;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+}
+
