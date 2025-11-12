@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hi my old laur 💕</title>
+  <meta name="description" content="Kleine interaktive Geburtstagsüberraschung" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="bg"></div>
+
+  <main class="card">
+    <h1>Hi my old laur</h1>
+    <p>Just wanted to remind you that I love you very much.</p>
+
+    <!-- 💬 Neuer Text über dem Musik-Button -->
+    <p style="margin-top: 20px; font-style: italic; color: #555;">
+      Ich glaube so hört sich dein Kopf an wenn du Spongebob anschaust:
+    </p>
+
+    <div class="cta-row">
+      <button id="musicBtn" class="btn">Starte die Musik habibi</button>
+    </div>
+
+    <div class="cta-row">
+  <button id="loveBtn" class="btn special-btn">klick mich an sonst crashout</button>
+</div>
+
+    <div id="toast" role="status" aria-live="polite"></div>
+
+    <section class="gallery">
+      <figure>
+        <img src="assets/photos/photo1.jpg" alt="Wir zwei – Moment 1">
+        <figcaption>laur and bes</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/photos/photo2.jpg" alt="Wir zwei – Moment 2">
+        <figcaption>laur her spirit animal</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/photos/photo3.jpg" alt="Wir zwei – Moment 3">
+        <figcaption>idk what to say, u like books?</figcaption>
+      </figure>
+    </section>
+
+    <audio id="song" src="assets/music/song.mp3" loop preload="auto"></audio>
+
+    <footer>
+      <small>love u, ur fav geek</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
